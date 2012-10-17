@@ -1,0 +1,11 @@
+.center_element {
+  margin: 0 auto;
+}
+
+
+.center_inline {
+  text-align: center;
+}
+.center_inline * {
+  margin: 0 auto;
+}
