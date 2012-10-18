@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NumberSensei - Tricks</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    <script src="/javascripts/initialize.js"></script>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="header">
+        <h1>Multiply by 25</h1>
+        <a href="../" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+    </div>
+    <div data-role="content">
+        <p>Multiplying by 25 uses the same principle as multiplication by 5 and 50.  We relate 25 to a power of 10.</p>
+        <h2>The Trick:</h2>
+        100 = 25 &#215; 4 so do the following
+        <ol>
+        	<li>Divide the number by 4 and write down the answer, ignoring the remainder.</li>
+        	<li>Find the last 2 digits from the list below and write them down at the end.</li>
+        </ol>
+        <p>Note that the last 2 digits can be found from the remainder after division.
+        	<ul>
+        		<li>If the remainder is 0 the last 2 digits will be 00.</li>
+        		<li>If the remainder is 1 the last 2 digits will be 25.</li>
+        		<li>If the remainder is 2 the last 2 digits will be 50.</li>
+        		<li>If the remainder is 3 the last 2 digits will be 75.</li>
+        	</ul></p>
+        	<p>You can use the normal division algorithm and write down the digits as you find them out to divide by 4.  Just be sure to remember the remainder.</p>
+        <h2>Examples:</h2>
+        <h3>Find 140 &#215; 25</h3>
+        <ol>
+        	<li>140 &#247; 4 = 35 with remainder 0. Write "35".</li>
+        	<li>Since the remainder is 0 write "00" after the "35".  The answer is 3,500.</li>
+        </ol>
+        <h3>Find 12,345 &#215; 25</h3>
+        <ol>
+        	<li>12,345 &#247; 4 = 3,086 with remainder 1. Write "3086".       	</li>
+        	<li>Since the remainder is 1 write the last two digits of "25".  The answer is 308,625.</li>
+        </ol>
+    </div>
+</div>
+
+</body>
+</html>
