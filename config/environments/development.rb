@@ -34,4 +34,7 @@ NumberSenseiRails::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  #This apparently serves static assets - George
+  config.serve_static_assets = true
 end

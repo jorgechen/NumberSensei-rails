@@ -27,4 +27,9 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
+
+
+# other useless things
+.project
+.svn
 /.idea
