@@ -7,6 +7,48 @@
     <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
     <script src="/javascripts/initialize.js"></script>
+    <script>
+        var answers = new Array(5);
+        var questions = new Array(5);
+        var holder = new Array(2);
+        var generate_mult_question = function(num1, num2){
+            if(num1 == 0){
+                 num1 = Math.floor(9 + Math.random() * 991); //generates a random number from 9 to 999
+            }
+            if(num2 == 0){
+                 num2 = Math.floor(9 + Math.random() * 991);
+            }
+            return [num1+ ' &#215; ' + num2,num1 * num2]
+        }
+
+        var score_test = function(){
+            for(var j = 0; j < 5; j ++)
+            if(parseInt($('[name="question'+j+'"]').val()) === answers[j]){
+                $('[name="problem' + j +'I"]').attr('src', "../images/ok-green.png")
+            }
+            else{
+                $('[name="problem' + j +'I"]').attr('src', "../images/xmark.png")
+            }
+        };
+        var problems_for_25 = function(){
+            for( var i = 0; i < 5; i++){
+                holder = generate_mult_question(25,0);
+                answers[i] = holder[1];
+                questions[i] = holder[0]
+                document.write('<li>');
+                document.write('<span data-role="fieldcontain"> <label for="question' + i + '" >' + holder[0] +' = </label><input type="text" size = "8" name="question' + i + '" id="name" value="" data-mini ="true" /></span>')
+                document.write('<img name="problem'+i+'I" src="">');
+                document.write('</li>')
+               }
+        };
+        </script>
+        <script>
+        $(document).ready(function() {
+           $('#button').click(function(){
+                score_test();
+           });
+        });
+    </script>
 </head>
 <body>
 <div data-role="page">
@@ -36,11 +78,18 @@
         	<li>140 &#247; 4 = 35 with remainder 0. Write "35".</li>
         	<li>Since the remainder is 0 write "00" after the "35".  The answer is 3,500.</li>
         </ol>
-        <h3>Find 12,345 &#215; 25</h3>
+        <h3>Find 123 &#215; 25</h3>
         <ol>
-        	<li>12,345 &#247; 4 = 3,086 with remainder 1. Write "3086".       	</li>
-        	<li>Since the remainder is 1 write the last two digits of "25".  The answer is 308,625.</li>
+        	<li>123 &#247; 4 = 40 with remainder 3. Write "40".       	</li>
+        	<li>Since the remainder is 3 write the last two digits of "75".  The answer is 4,075.</li>
         </ol>
+        <h2>Practice:</h2>
+        <ol>
+        <script>
+        problems_for_25();
+        </script>
+        </ol>
+        <input type="button" name="button" id="button" value="Score" data-mini="true">
     </div>
 </div>
 

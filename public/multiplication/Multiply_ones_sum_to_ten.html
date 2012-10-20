@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NumberSensei - Tricks</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    <script src="/javascripts/initialize.js"></script>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="header">
+        <h1>Multiplying numbers whose ones add to ten and have the same ten's digits.</h1>
+        <a href="../" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+    </div>
+    <div data-role="content">
+        <p>If ab and ac are two numbers with a being the tens digits and b, c being ones digits such that c+b=10 then this trick will apply.  
+            The value of ab is 10 &#215; a + b and the value of ac is 10 &#215; a + c.  When we multiply these together we get <br>
+            (10 &#215; a + b) &#215; (10 &#215; a + c) = 100 &#215; a<sup>2</sup> + 10 &#215;ac + 10 &#215; ab + bc = 
+            100 &#215; a<sup>2</sup> + 10 &#215;a &#215; (b + c) + bc =
+            100 &#215; (a<sup>2</sup> + a) + bc =
+             100 &#215;a&#215;(a+1) + bc. </p>
+        <h2>The Trick:</h2>
+        We identify a, b and c as above and do the following.
+        <ol>
+            <li>Multiply b and c.  Write down the result.  This is the last TWO digits of the answer. Single digit numbers must have a 0 in front of them!</li>
+            <li>Multiply a with the next number after a.  This is the rest of the answer.  Write it down.</li>
+        </ol>     
+        <h2>Examples:</h2>
+        <h3>Find 24 &#215; 26</h3>
+        <ol>
+            <li>Here a = 2, b = 4, and c = 6.  b &#215; c = 6 &#215; 4 = 24.  24 are the last 2 digits.</li>
+            <li>a = 2.  So we do 2 &#215; 3 = 6.  6 is the hundreds place.  The answer is 624.</li>
+        </ol>
+        <h3>Find 111 &#215; 119</h3>
+        <ol>
+            <li>Here a = 11, b = 1, and c = 9.  b &#215; c = 9 so write down "09".</li>
+            <li>a = 11, so do 11 &#215; 12 = 132.  Write down 132.  The answer is 13,209.</li>
+        </ol>
+    </div>
+</div>
+
+</body>
+</html>
