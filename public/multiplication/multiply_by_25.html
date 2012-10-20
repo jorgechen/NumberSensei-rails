@@ -24,10 +24,10 @@
         var score_test = function(){
             for(var j = 0; j < 5; j ++)
             if(parseInt($('[name="question'+j+'"]').val()) === answers[j]){
-                $('[name="problem' + j +'I"]').attr('src', "http://cdn4.iconfinder.com/data/icons/sketchdock-ecommerce-icons/ok-green.png")
+                $('[name="problem' + j +'I"]').attr('src', "../images/ok-green.png")
             }
             else{
-                $('[name="problem' + j +'I"]').attr('src', "http://cdn2.iconfinder.com/data/icons/diagona/icon/16/101.png")
+                $('[name="problem' + j +'I"]').attr('src', "../images/xmark.png")
             }
         };
         var problems_for_25 = function(){
