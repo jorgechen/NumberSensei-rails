@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NumberSensei - Tricks</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    <script src="/javascripts/initialize.js"></script>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="header">
+        <h1>Multiplying two numbers with the same tens digits.</h1>
+        <a href="../" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+    </div>
+    <div data-role="content">
+        <p>If ab and ac are two numbers with a being the tens digits and b, c being ones digits then the following is true.  
+            The value of ab is 10 &#215; a + b and the value of ac is 10 &#215; a + c.  When we multiply these together we get <br>
+            (10 &#215; a + b) &#215; (10 &#215; a + c) = 100 &#215; a<sup>2</sup> + 10 &#215;ac + 10 &#215; ab + bc = 
+            100 &#215; a<sup>2</sup> + 10 &#215;a &#215; (b + c) + bc</p>
+        <h2>The Trick:</h2>
+        We identify a, b and c as above and do the following.
+        <ol>
+            <li>Multiply the one's digits together.  Write down the one's digit of the answer and carry the tens.</li>
+            <li>Add b and c.  Multiply this with a.  Add this to your carry and write down the ones digit of the answer.  Carry the rest.</li>
+            <li>Compute a<sup>2</sup> + the carry.  Write this down as the final digits.</li>
+            <li></li>
+        </ol>     
+        <h2>Examples:</h2>
+        <h3>Find 22 &#215; 27</h3>
+        <ol>
+            <li>Here a = 2, b = 2, and c = 7. 2 &#215; 7 = 14.  Write down "4", carry "1".</li>
+            <li>b + c = 9.  a &#215; 9 = 18.  18 + 1 = 19.  Write "9", carry "1".</li>
+            <li>a<sup>2</sup> = 4.  4 + 1  = 5.  Write "5".  The answer is 594.</li>
+        </ol>
+        <h3>Find 307 &#215; 309</h3>
+        <ol>
+            <li>Here a = 30, b = 7, and c = 9.  b &#215; c = 63 so write down "3", carry "6".</li>
+            <li>b + c = 16.  30 &#215; 16 = 480.  480 + 6 = 486.  Write "6" and carry "48".</li>
+            <li>a<sup>2</sup> = 900.  900 + 48 = 948.  Write 948.  The answer is 94,863.</li>
+        </ol>
+    </div>
+</div>
+
+</body>
+</html>

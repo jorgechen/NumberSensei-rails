@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NumberSensei - Tricks</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    <script src="/javascripts/initialize.js"></script>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="header">
+        <h1>Multiply by 75</h1>
+        <a href="../" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+    </div>
+    <div data-role="content">
+        <p>Think of 75 as 3 &#215; 100 &#247; 4. </p>
+        <h2>The Trick:</h2>
+        <ol>
+            <li>Divide the number by 4 and remember the remainder.</li>
+            <li>Multiply the whole part of the result by 3 and then multiply by 100.</li>
+            <li>Add 75 &#215; the remainder to the result.  Write it down.</li>
+        </ol>
+        Note that all odd numbers will end in 25 or 75 and all even numbers will end in 00 or 50.
+        <h2>Examples</h2>
+        <h3>Find 124 &#215 75</h3>
+        <ol>
+            <li>124 &#247; 4 = 31 with remainder 0.</li>
+            <li>31 &#215; 300 = 9300.  The answer is 9,300.</li>
+        </ol>
+        <h3>Find 1,091 &#215 50</h3>
+        <ol>
+            <li>1,091 &#247; 4 = 272 with a remainder of 3.</li>
+            <li> 272 &#215 300 = 81,600.</li>
+            <li>Add 225 to the result to get 81,825.</li>
+        </ol>
+    </div>
+</div>
+
+</body>
+</html>
