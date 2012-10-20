@@ -5,7 +5,7 @@ $( document ).bind( "mobileinit", function() {
   $.mobile.fallbackTransition.slideout = "none";
   
   // otherwise linking to other pages don't flow well
-  $.mobile.ajaxEnabled = false;
+  $.mobile.ajaxEnabled = true;
 
   //defaults dates to text after selection
   $.mobile.page.prototype.options.degradeInputs.date = true;
